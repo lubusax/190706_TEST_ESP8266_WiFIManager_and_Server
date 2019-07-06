@@ -1,4 +1,4 @@
-#include <ESP8266WiFi.h>          //ESP8266 Core WiFi Library (you most likely already have this in your sketch)
+#include <ESP8266WiFi.h>          //ESP8266 Core WiFi Library 
 
 #include <DNSServer.h>            //Local DNS Server used for redirecting all requests to the configuration portal
 #include <ESP8266WebServer.h>     //Local WebServer used to serve the configuration portal
@@ -6,10 +6,12 @@
 
 
 void ensure_wifi_connection(void) {
+
     WiFiManager wm;
-    wm.resetSettings();
+
+    // wm.resetSettings(); uncomment if you want to reset the storedWiFi settings
 
     wm.autoConnect();
 
-    Serial.println("onnected to WiFi...");
+    Serial.println("Connected to WiFi...");
 }

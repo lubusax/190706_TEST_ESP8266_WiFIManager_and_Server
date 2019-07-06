@@ -1,10 +1,9 @@
 #include <Arduino.h>
-//#include <string>
 
 #include "WiFiConnection/WiFiConnection.h"
 #include "MyServer/MyServer.h"
 
-MyServer myserver(80);
+MyServer myserver(80); // create instance of the server class
 
 void setup() {
 
@@ -12,12 +11,12 @@ void setup() {
 
   ensure_wifi_connection();
   
-  myserver.KickOff();
+  myserver.KickOff(); // server begin and also create instance of a client class
 
 }
 
 void loop() {
 
-  myserver.ServerListen();
+  myserver.ServerListen(); // handle the server-client communication
 
 }
