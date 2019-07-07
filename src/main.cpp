@@ -17,6 +17,8 @@ void setup() {
 
 void loop() {
 
+  Serial.println("status 4: "+ myserver.m_output4State);
+  Serial.println("status 5: "+ myserver.m_output5State);
   myserver.ServerListen(); // handle the server-client communication
 
 }
